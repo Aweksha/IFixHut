@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    "./index.html", // Include HTML files to scan for class names
-    "./src/**/*.{js,jsx,ts,tsx}", // Include TS/TSX files from src folder
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'regal-blue': '#243c5a',
+      },
+    },
   },
   plugins: [],
 }
