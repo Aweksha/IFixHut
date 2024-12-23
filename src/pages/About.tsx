@@ -1,4 +1,4 @@
-import { Award, Clock, Users, Shield } from 'lucide-react';
+import { Award, Clock, Shield } from 'lucide-react';
 
 export default function About() {
   return (
