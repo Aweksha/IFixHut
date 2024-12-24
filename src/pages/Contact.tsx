@@ -6,7 +6,8 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    contact: ''
   });
   const [status, setStatus] = useState('');
 
@@ -20,11 +21,12 @@ export default function Contact() {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
+          form_contact:formData.contact,
         },
         'IX5QJwJRlnMDITeB-'
       );
       setStatus('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', message: '', contact: '' });
     } catch {
       setStatus('Failed to send message. Please try again.');
     }
@@ -47,6 +49,16 @@ export default function Contact() {
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+                  required
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block text-gray-700 mb-2">Contact</label>
+                <input
+                  type="text"
+                  value={formData.contact}
+                  onChange={(e) => setFormData({...formData, contact: e.target.value})}
                   className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                   required
                 />
@@ -101,7 +113,7 @@ export default function Contact() {
                 <MapPin className="w-6 h-6 text-blue-600" />
                 <div>
                   <h3 className="font-semibold">Address</h3>
-                  <p className="text-gray-600">2310 Virginia Pkwy #150<br />McKinney, TX 75071</p>
+                  <p className="text-gray-600">2310 Virginia Pkwy<br />McKinney, TX 75071</p>
                 </div>
               </div>
             </div>

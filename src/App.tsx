@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import LoadingSpinner from './components/LoadingSpinner';
+import Footer from './components/Footer/Footer';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -15,15 +16,18 @@ export default function App() {
     <Router>
       <div className="min-h-screen bg-[rgb(42,22,74)]">
         <Navbar />
-        <Suspense fallback={<LoadingSpinner />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/custom-pc" element={<CustomPC />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Suspense>
+        <main className="flex-grow">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/custom-pc" element={<CustomPC />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
       </div>
     </Router>
   );
