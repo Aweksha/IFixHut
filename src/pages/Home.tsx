@@ -5,7 +5,6 @@ import { FadeIn } from "../components/animations/FadeIn";
 import RepairProcess from "../components/RepairProcess";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 const services = [
   {
@@ -36,26 +35,6 @@ const services = [
 ];
 
 export default function Home() {
-
-const [reviews, setReviews] = useState([]);
-
-useEffect(() => {
-  const fetchReviews = async () => {
-    try {
-      const response = await fetch("/api/google-reviews");
-      if (!response.ok) {
-        throw new Error("Failed to fetch reviews");
-      }
-      const data = await response.json();
-      const fiveStarReviews = data.filter((review: { rating: number; }) => review.rating === 5);
-      setReviews(fiveStarReviews);
-    } catch (error) {
-      console.error("Error fetching reviews:", error);
-    }
-  };
-
-  fetchReviews();
-}, []);
 
   return (
     <div className="min-h-screen bg-cover bg-gray-100">
@@ -121,8 +100,6 @@ useEffect(() => {
       </div>
 
       <RepairProcess />
-
-      
 
 
     </div>
