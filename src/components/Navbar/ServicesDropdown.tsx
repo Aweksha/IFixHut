@@ -38,7 +38,7 @@ const services = [
     return (
         <div className="relative" ref={dropdownRef}>
         <button
-            className="flex items-center space-x-1 hover:bg-purple-700 px-3 py-2 rounded-md"
+            className="flex items-center space-x-1 hover:bg-slate-700 px-3 py-2 rounded-md"
             onClick={() => setIsOpen(!isOpen)}
         >
             <span>Services</span>
@@ -57,7 +57,7 @@ const services = [
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute left-0 mt-2 w-72 bg-gray-900 rounded-lg shadow-xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800"
+                className="absolute left-0 mt-2 w-72 bg-slate-950/80 backdrop-blur-md rounded-lg shadow-xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800"
                 style={{
                 scrollbarWidth: 'thin',
                 scrollbarColor: '#4B5563 #1F2937'

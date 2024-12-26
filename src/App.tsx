@@ -11,7 +11,6 @@ const CustomPC = lazy(() => import('./pages/CustomPC'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 
-
 // Lazy load service pages
 const MacBookRepair = lazy(() => import('./pages/services/MacBookRepair'));
 const IMacRepair = lazy(() => import('./pages/services/IMacRepair'));
@@ -30,9 +29,10 @@ const NetworkSetup = lazy(() => import('./pages/services/NetworkSetup'));
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[rgb(42,22,74)]">
+      {/* Apply the fixed background image */}
+      <div className='bg-slate-950'>
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow backdrop-blur-sm bg-slate-800 bg-opacity-80">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Routes */}

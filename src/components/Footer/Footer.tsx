@@ -7,7 +7,7 @@ import SocialLinks from './SocialLinks';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <motion.div

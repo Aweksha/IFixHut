@@ -1,49 +1,77 @@
-import { Laptop, Smartphone, Cpu, Wrench } from 'lucide-react';
-import Hero from '../components/Hero';
-import ServiceCard from '../components/ServiceCard';
-import { FadeIn } from '../components/animations/FadeIn';
-import RepairProcess from '../components/RepairProcess';
+import { Laptop, Smartphone, Cpu, Wrench, Tablet, } from "lucide-react";
+import Hero from "../components/Hero";
+import ServiceCard from "../components/ServiceCard";
+import { FadeIn } from "../components/animations/FadeIn";
+import RepairProcess from "../components/RepairProcess";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const services = [
   {
     icon: Smartphone,
     title: "Phone Repair",
-    description: "Screen replacement, battery service, and more"
+    description: "Screen replacement, battery service, and more",
   },
   {
     icon: Laptop,
     title: "Laptop Repair",
-    description: "Hardware fixes, upgrades, and maintenance"
+    description: "Hardware fixes, upgrades, and maintenance",
   },
   {
     icon: Cpu,
     title: "Custom PC Builds",
-    description: "Tailored gaming and workstation builds"
+    description: "Tailored gaming and workstation builds",
   },
   {
     icon: Wrench,
     title: "General Repairs",
-    description: "Diagnostics and repairs for all tech"
-  }
+    description: "Diagnostics and repairs for all tech",
+  },
+  {
+    icon: Tablet,
+    title: "Tablet",
+    description: "From cracked screens to faulty batteries, we offer high-quality repairs for all tablet brands, including iPads and Android tablets. Whether it's a hardware or software issue, our technicians will have your tablet working like new again in no time.",
+  },
 ];
 
-
 export default function Home() {
+
+const [reviews, setReviews] = useState([]);
+
+useEffect(() => {
+  const fetchReviews = async () => {
+    try {
+      const response = await fetch("/api/google-reviews");
+      if (!response.ok) {
+        throw new Error("Failed to fetch reviews");
+      }
+      const data = await response.json();
+      const fiveStarReviews = data.filter((review: { rating: number; }) => review.rating === 5);
+      setReviews(fiveStarReviews);
+    } catch (error) {
+      console.error("Error fetching reviews:", error);
+    }
+  };
+
+  fetchReviews();
+}, []);
+
   return (
-    <div className="min-h-screen bg-cover bg-gray-50">
+    <div className="min-h-screen bg-cover bg-gray-100">
       <Hero
         title="All Tech Solution"
-        subtitle="We fix whats broken and help you build your dream tech"
-        backgroundImage="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&q=80"
+        subtitle="We fix what's broken and help you build your dream tech"
+        backgroundImage="https://images.pexels.com/photos/2225618/pexels-photo-2225618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         ctaText="Get Started"
         ctaLink="/contact"
       />
 
-      <div className="max-w-7xl mx-auto py-16 px-4">
+      <div className="max-w-7xl mx-auto py-16 px-2 border-b-2 border-slate-500">
         <FadeIn>
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
         </FadeIn>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 ">
           {services.map((service, index) => (
             <FadeIn key={index} delay={index * 0.3}>
               <ServiceCard {...service} />
@@ -52,7 +80,62 @@ export default function Home() {
         </div>
       </div>
 
+      {/* New Call-to-Action Section */}
+      <div className="relative bg-gray-900 text-white py-24 md:py-32 shadow-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0"
+        >
+          {/* Text Content */}
+          <div className="text-center lg:text-left space-y-6 max-w-lg">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              Get Professional Services for All Your Devices
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed">
+              Trust us for expert repairs on smartphones, tablets, laptops, desktops,
+              and more. Schedule today for top-tier service!
+            </p>
+          </div>
+
+          {/* React Router Link as Button */}
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="z-[1]">
+            <Link
+              to="/contact"
+              className="bg-red-500 text-white text-lg md:text-xl font-semibold py-4 px-8 rounded-lg shadow-lg transition-all  hover:bg-white hover:text-black"
+            >
+              Free Consultation
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-25">
+          <img
+            src="https://images.pexels.com/photos/6755133/pexels-photo-6755133.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Repair Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
       <RepairProcess />
+
+      <div className="max-w-7xl mx-auto py-16 px-2">
+        <h2 className="text-3xl font-bold text-center mb-12">Customer Reviews</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {reviews.map((review, index) => (
+            <div key={index} className="bg-white p-6 shadow-md rounded-lg">
+              <h3 className="text-lg font-semibold">{review.author_name}</h3>
+              <p className="text-yellow-500">{'⭐'.repeat(review.rating)}</p>
+              <p className="text-gray-700 mt-2">{review.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
     </div>
   );
 }

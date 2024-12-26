@@ -16,13 +16,13 @@ export default function Navbar() {
       initial={{ top: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .5 }}
-      className="sticky top-0 rounded-bl-2xl rounded-br-2xl bg-[rgba(50,23,77,.5)] backdrop-blur-md z-50 shadow-black shadow-2xl text-white"
+      className="sticky top-0 rounded-bl-2xl rounded-br-2xl bg-slate-700/50 backdrop-blur-md z-50 shadow-black shadow-2xl text-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={logo} alt="IFIXHUT Logo" className="h-20 w-32" />
+              <img src={logo} alt="IFIXHUT Logo" className="lg:h-24 lg:w-40 h-16 w-28" />
             </Link>
           </div>
 

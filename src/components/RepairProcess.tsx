@@ -3,30 +3,37 @@ import { motion } from "framer-motion";
 const steps = [
     {
         id: 1,
-        title: "Diagnostic",
-        description: "First we run a series of tests to figure the exact issue on your device and the cause of it.",
+        title: "Free Consultations",
+        description: "Contact us for a free consultation to discuss your repair needs.",
     },
     {
         id: 2,
-        title: "Repair Options",
+        title: "Choose Package",
         description:
-        "After we find the problem and the cause of it, we will provide you with the repair options, quote, and time. Then you can decide what to do further.",
+        "Pick the service package that best fits your device and repair requirements.",
     },
     {
         id: 3,
-        title: "Get It Repaired",
+        title: "Check Devices",
         description:
-        "After we get an approval from you, we will start the repair on your device. We try to complete the repair as soon as possible and call you for a pickup.",
+        "Bring in your device for a thorough check-up and diagnosis by our technicians.",
+    },
+    {
+        id: 4,
+        title: "Repair Devices",
+        description:
+        "We'll repair your device quickly, using high-quality parts and expert skills.",
+
     },
     ];
 
     export default function RepairProcess() {
     return (
-        <div className="relative bg- py-16 bg-[rgba()]">
-        <h2 className="text-3xl font-bold text-center mb-12">Repair Process</h2>
+        <div className="relative py-16 bg-inherit">
+        <h2 className="text-4xl font-bold text-center mb-12">Repair Process</h2>
         <div className="relative max-w-4xl mx-auto">
             {/* Vertical Line */}
-            <div className="absolute sm: hidden lg:flex z-10 left-1/2 transform -translate-x-1/2 top-0 h-full w-1 rounded-2xl bg-purple-500" />
+            <div className="absolute sm: hidden lg:flex z-10 left-1/2 transform -translate-x-1/2 top-0 h-full w-2 rounded-2xl bg-slate-500" />
 
             {/* Steps */}
             <div className="space-y-16">

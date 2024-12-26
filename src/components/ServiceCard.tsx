@@ -12,7 +12,7 @@ export default function ServiceCard({ icon: Icon, title, description }: ServiceC
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="bg-white p-6 rounded-lg shadow-lg text-center"
+      className="bg-white p-6 rounded-lg shadow-lg text-center border-b-2 border-slate-400 "
     >
       <Icon className="w-12 h-12 mx-auto mb-4 text-blue-600" />
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
