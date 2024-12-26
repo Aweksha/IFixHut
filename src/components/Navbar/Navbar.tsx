@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      initial={{ top: 0, y: 10 }}
+      initial={{ top: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .5 }}
       className="sticky top-0 rounded-bl-2xl rounded-br-2xl bg-slate-700/50 backdrop-blur-md z-50 shadow-black shadow-2xl text-white"

@@ -18,7 +18,7 @@ export default function Hero({ title, subtitle, backgroundImage, ctaText, ctaLin
       <motion.div
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: .3 }}
       className="absolute inset-0 bg-black bg-opacity-60"
       >
         <div className="max-w-7xl mx-auto h-full flex items-center px-4">

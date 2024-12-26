@@ -64,7 +64,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
           className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0"
         >
@@ -80,7 +80,7 @@ export default function Home() {
           </div>
 
           {/* React Router Link as Button */}
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="z-[1]">
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} transition={{duration: .2}} className="z-[1]">
             <Link
               to="/contact"
               className="bg-red-500 text-white text-lg md:text-xl font-semibold py-4 px-8 rounded-lg shadow-lg transition-all  hover:bg-white hover:text-black"

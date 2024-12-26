@@ -43,10 +43,10 @@ const steps = [
                 className={`flex items-center justify-center lg:justify-start ${
                     index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                 }`}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: .2, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: .5, delay: index * 0.2 }}
-                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: .2, delay: index * 0.1 }}
+                viewport={{ once: true, amount: .3 }}
                 >
                 {/* Step Content */}
                 <div className="bg-white shadow-xl p-6 rounded-lg max-w-md w-full bg-blue-900/5 backdrop-blur-sm">
