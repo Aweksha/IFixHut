@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import NavLink from './NavLink';
 import ServicesDropdown from './ServicesDropdown';
+import logo from '../../assets/logo.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src="/src/assets/logo.png" alt="IFIXHUT Logo" className="h-20 w-32" />
+              <img src={logo} alt="IFIXHUT Logo" className="h-20 w-32" />
             </Link>
           </div>
 
