@@ -5,6 +5,8 @@ import { FadeIn } from "../components/animations/FadeIn";
 import RepairProcess from "../components/RepairProcess";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import hero from '../assets/hero.webp'
+import consult from '../assets/consult.webp'
 
 const services = [
   {
@@ -30,7 +32,22 @@ const services = [
   {
     icon: Tablet,
     title: "Tablet",
-    description: "From cracked screens to faulty batteries, we offer high-quality repairs for all tablet brands, including iPads and Android tablets. Whether it's a hardware or software issue, our technicians will have your tablet working like new again in no time.",
+    description: "From cracked screens to faulty batteries, we offer high-quality repairs for all tablet brands, including iPads and Android tablets.",
+  },
+  {
+    icon: Tablet,
+    title: "Tablet",
+    description: "From cracked screens to faulty batteries, we offer high-quality repairs for all tablet brands, including iPads and Android tablets.",
+  },
+  {
+    icon: Tablet,
+    title: "Tablet",
+    description: "From cracked screens to faulty batteries, we offer high-quality repairs for all tablet brands, including iPads and Android tablets.",
+  },
+  {
+    icon: Tablet,
+    title: "Tablet",
+    description: "From cracked screens to faulty batteries, we offer high-quality repairs for all tablet brands, including iPads and Android tablets.",
   },
 ];
 
@@ -41,7 +58,7 @@ export default function Home() {
       <Hero
         title="All Tech Solution"
         subtitle="We fix what's broken and help you build your dream tech"
-        backgroundImage="https://images.pexels.com/photos/2225618/pexels-photo-2225618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        backgroundImage={hero}
         ctaText="Get Started"
         ctaLink="/contact"
       />
@@ -93,7 +110,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 opacity-25">
           <img
-            src="https://images.pexels.com/photos/6755133/pexels-photo-6755133.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src={consult}
             alt="Repair Background"
             className="w-full h-full object-cover"
           />
