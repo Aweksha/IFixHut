@@ -1,4 +1,5 @@
 import { Award, Clock, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
@@ -6,7 +7,7 @@ export default function About() {
       {/* About Section */}
       <div className="max-w-7xl mx-auto py-16 px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">About IFIXHUT</h1>
+          <h1 className="text-4xl font-bold mb-4">About <span className='text-red-600'>IFIX</span>HUT</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Your trusted partner in technology repair and custom PC solutions since 2010
           </p>
@@ -73,9 +74,9 @@ export default function About() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-gray-600 mb-8">Contact us today for all your tech repair and custom PC needs</p>
-          <a href="/contact" className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700">
+          <Link to="/contact" className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700">
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </div>
