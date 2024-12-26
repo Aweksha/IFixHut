@@ -122,18 +122,7 @@ useEffect(() => {
 
       <RepairProcess />
 
-      <div className="max-w-7xl mx-auto py-16 px-2">
-        <h2 className="text-3xl font-bold text-center mb-12">Customer Reviews</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (
-            <div key={index} className="bg-white p-6 shadow-md rounded-lg">
-              <h3 className="text-lg font-semibold">{review.author_name}</h3>
-              <p className="text-yellow-500">{'⭐'.repeat(review.rating)}</p>
-              <p className="text-gray-700 mt-2">{review.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      
 
 
     </div>
