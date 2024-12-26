@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface HeroProps {
   title: string;
@@ -25,9 +26,9 @@ export default function Hero({ title, subtitle, backgroundImage, ctaText, ctaLin
             <h1 className="text-5xl font-bold mb-4">{title}</h1>
             <p className="text-xl mb-8">{subtitle}</p>
             {ctaText && ctaLink && (
-              <a href={ctaLink} className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
+              <Link to={ctaLink} className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
                 {ctaText}
-              </a>
+              </Link>
             )}
           </div>
         </div>
