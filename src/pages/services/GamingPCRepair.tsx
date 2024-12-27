@@ -7,7 +7,7 @@ export default function GamingPCRepair() {
   const service = services.find(s => s.id === 'gaming-pc-repair')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

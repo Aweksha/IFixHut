@@ -6,7 +6,7 @@ export default function DataRecovery() {
   const service = services.find(s => s.id === 'data-recovery')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

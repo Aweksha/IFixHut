@@ -6,7 +6,7 @@ export default function CellphoneRepair() {
   const service = services.find(s => s.id === 'cellphone-repair')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

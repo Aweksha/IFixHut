@@ -6,7 +6,7 @@ export default function IMacRepair() {
   const service = services.find(s => s.id === 'imac-repair')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

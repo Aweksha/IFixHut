@@ -7,7 +7,7 @@ export default function PCUpgrade() {
   const service = services.find(s => s.id === 'pc-upgrade')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

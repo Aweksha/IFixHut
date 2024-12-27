@@ -7,7 +7,7 @@ export default function DeviceTuneup() {
   const service = services.find(s => s.id === 'device-tuneup')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

@@ -6,7 +6,7 @@ export default function IPadRepair() {
   const service = services.find(s => s.id === 'ipad-repair')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

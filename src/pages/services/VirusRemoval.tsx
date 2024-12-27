@@ -7,7 +7,7 @@ export default function VirusRemoval() {
   const service = services.find(s => s.id === 'virus-removal')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

@@ -6,7 +6,7 @@ export default function CustomGamingPC() {
   const service = services.find(s => s.id === 'custom-gaming-pc')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

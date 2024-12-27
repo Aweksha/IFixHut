@@ -7,7 +7,7 @@ export default function LaptopRepair() {
   const service = services.find(s => s.id === 'laptop-repair')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

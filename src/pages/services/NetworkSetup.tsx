@@ -7,7 +7,7 @@ export default function NetworkSetup() {
   const service = services.find(s => s.id === 'network-setup')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );

@@ -6,7 +6,7 @@ export default function MacBookRepair() {
   const service = services.find(s => s.id === 'macbook-repair')!;
   return (
     <>
-      <ServiceLayout service={service} />;
+      <ServiceLayout service={service} />
       <Consultation/>
     </>
   );
