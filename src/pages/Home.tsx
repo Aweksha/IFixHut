@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import hero from '../assets/hero.webp'
 import consult from '../assets/consult.webp'
+import ReviewsSection from '../components/reviews/ReviewSection';
 
 const services = [
   {
@@ -118,7 +119,7 @@ export default function Home() {
       </div>
 
       <RepairProcess />
-
+      <ReviewsSection />
 
     </div>
   );

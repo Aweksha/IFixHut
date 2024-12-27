@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import {  motion } from  "framer-motion"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -35,10 +36,15 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0}}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-12"
+        >
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
           <p className="text-gray-600">Get in touch with our expert team</p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="bg-white rounded-lg shadow-lg p-8">

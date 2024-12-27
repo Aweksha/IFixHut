@@ -57,7 +57,7 @@ const services = [
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute left-0 mt-2 w-72 bg-slate-950/80 backdrop-blur-md rounded-lg shadow-xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800"
+                className="absolute left-0 mt-2 w-72 bg-slate-950/70 backdrop-blur-md rounded-lg shadow-xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800 border-b-2 border-slate-800"
                 style={{
                 scrollbarWidth: 'thin',
                 scrollbarColor: '#4B5563 #1F2937'
@@ -72,7 +72,7 @@ const services = [
                     >
                     <NavLink 
                         to={service.path}
-                        className="block w-full text-left px-4 py-2 hover:bg-gray-800"
+                        className="block w-full text-left px-4 py-2 hover:bg-slate-700/50"
                         clickValue="setIsOpen(false)"
                     >
                         {service.name}

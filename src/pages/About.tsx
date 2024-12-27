@@ -1,17 +1,24 @@
 import { Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div 
+    className="min-h-screen bg-gray-50">
       {/* About Section */}
       <div className="max-w-7xl mx-auto py-16 px-4">
-        <div className="text-center mb-12">
+        <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0}}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-12"
+        >
           <h1 className="text-4xl font-bold mb-4">About <span className='text-red-600'>IFIX</span>HUT</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Your trusted partner in technology repair and custom PC solutions since 2010
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
@@ -41,7 +48,7 @@ export default function About() {
             </div>
           </div>
           <div>
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80" 
               alt="Tech repair workspace" 
               className="rounded-lg shadow-lg"

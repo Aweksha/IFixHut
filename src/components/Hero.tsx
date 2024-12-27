@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+import { memo } from 'react';
+import { ReducedMotion } from './animations/ReducedMotion';
+import OptimizedImage from './OptimizedImage';
 import { Link } from 'react-router-dom';
 
 interface HeroProps {
@@ -9,30 +11,36 @@ interface HeroProps {
   ctaLink?: string;
 }
 
-export default function Hero({ title, subtitle, backgroundImage, ctaText, ctaLink }: HeroProps) {
+export default memo(function Hero({
+  title,
+  subtitle,
+  backgroundImage,
+  ctaText,
+  ctaLink
+}: HeroProps) {
   return (
-    <div
-      className="h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: `url("${backgroundImage}")` }}
-    >
-      <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: .3 }}
-      className="absolute inset-0 bg-black bg-opacity-60"
-      >
+    <ReducedMotion className="relative h-[500px] overflow-hidden">
+      <OptimizedImage
+        src={backgroundImage}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-60">
         <div className="max-w-7xl mx-auto h-full flex items-center px-4">
           <div className="text-white">
-            <h1 className="text-5xl font-bold mb-4">{title}</h1>
-            <p className="text-xl mb-8">{subtitle}</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
+            <p className="text-lg md:text-xl mb-8">{subtitle}</p>
             {ctaText && ctaLink && (
-              <Link to={ctaLink} className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
+              <Link
+                to={ctaLink}
+                className="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors"
+              >
                 {ctaText}
               </Link>
             )}
           </div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </ReducedMotion>
   );
-}
+});
