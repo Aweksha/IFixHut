@@ -21,8 +21,8 @@ interface StatItemProps {
         <h2 className="text-3xl font-bold text-center mb-8">Our Expertise</h2>
         <div className="grid md:grid-cols-4 gap-8 text-center">
             <StatItem value={10} label="Years Experience" suffix="+" />
-            <StatItem value={50000} label="Repairs Completed" suffix="+" />
-            <StatItem value={1000} label="Custom PCs Built" suffix="+" />
+            <StatItem value={30000} label="Repairs Completed" suffix="+" />
+            <StatItem value={500} label="Custom PCs Built" suffix="+" />
             <StatItem value={99} label="Satisfied Customers" suffix="%" />
         </div>
         </div>
