@@ -8,8 +8,8 @@ interface ServiceContentProps {
 export const ServiceContent = memo(function ServiceContent({ title, description }: ServiceContentProps) {
     return (
         <>
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <h3 className="text-white text-xl font-bold mb-2 text-pretty">{title}</h3>
+        <p className="text-gray-200">{description}</p>
         </>
     );
 });

@@ -20,7 +20,7 @@ export default memo(function ServiceCard({ icon, title, description }: ServiceCa
         duration: 0.2,
         ease: [0.21, 0.47, 0.32, 0.98]
       }}
-      className="bg-white p-6 rounded-lg shadow-lg text-center border-b-2 border-slate-400"
+      className="bg-neutral-400/10 p-6 rounded-lg shadow-2xl shadow-slate-950 text-center  border-slate-400 backdrop-blur-sm "
     >
       <ServiceIcon icon={icon} />
       <ServiceContent title={title} description={description} />

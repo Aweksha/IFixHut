@@ -6,5 +6,5 @@ interface ServiceIconProps {
 }
 
 export const ServiceIcon = memo(function ServiceIcon({ icon: Icon }: ServiceIconProps) {
-    return <Icon className="w-12 h-12 mx-auto mb-4 text-blue-600" />;
+    return <Icon className="text-blue-100 w-12 h-12 mx-auto mb-4" />;
 });
