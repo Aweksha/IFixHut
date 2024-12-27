@@ -5,14 +5,20 @@ interface OptimizedImageProps {
     src: string;
     alt: string;
     className?: string;
+    priority?: boolean;
     }
 
-export default memo(function OptimizedImage({ src, alt, className = '' }: OptimizedImageProps) {
+export default memo(function OptimizedImage({
+    src,
+    alt,
+    className = '',
+    priority = false
+    }: OptimizedImageProps) {
     return (
         <img
         src={lazyLoadImage(src)}
         alt={alt}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
         className={className}
         decoding="async"
         />

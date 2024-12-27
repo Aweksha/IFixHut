@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { ReducedMotion } from './animations/ReducedMotion';
 import OptimizedImage from './OptimizedImage';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
 interface HeroProps {
   title: string;
@@ -19,13 +20,18 @@ export default memo(function Hero({
   ctaLink
 }: HeroProps) {
   return (
-    <ReducedMotion className="relative h-[500px] overflow-hidden">
+    <ReducedMotion className="relative h-screen overflow-hidden">
       <OptimizedImage
         src={backgroundImage}
-        alt=""
+        alt="Hero background"
         className="absolute inset-0 w-full h-full object-cover"
+        priority={true} // Hero image should load immediately
       />
-      <div className="absolute inset-0 bg-black bg-opacity-60">
+      <motion.div
+      initial = {{opacity: 0, x: 40}}
+      animate = {{ opacity: 1, x: 0}}
+      transition={{duration: 0.5}}
+      className="absolute inset-0 bg-black bg-opacity-60">
         <div className="max-w-7xl mx-auto h-full flex items-center px-4">
           <div className="text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
@@ -40,7 +46,7 @@ export default memo(function Hero({
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
     </ReducedMotion>
   );
 });

@@ -1,10 +1,9 @@
-// Utility for lazy loading images
-export const lazyLoadImage = (src: string) => `https://images.weserv.nl/?url=${encodeURIComponent(src)}&w=800&q=70&output=webp`;
+export function lazyLoadImage(src: string): string {
+    // If the src is already an imported asset (webpack/vite processed), return as is
+    if (typeof src === 'string' && (src.startsWith('data:') || src.startsWith('blob:') || src.startsWith('http'))) {
+    return src;
+}
 
-// Preload critical images
-export const preloadImages = (images: string[]) => {
-    images.forEach(src => {
-        const img = new Image();
-        img.src = lazyLoadImage(src);
-    });
-};
+// For imported images (which are processed by bundler), return the src directly
+return src;
+}

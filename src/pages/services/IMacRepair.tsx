@@ -1,21 +1,14 @@
-import ServicePage from '../../components/ServicePage';
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
 
 export default function IMacRepair() {
+  const service = services.find(s => s.id === 'imac-repair')!;
   return (
-    <ServicePage
-      title="iMac Repair & Upgrade"
-      description="Expert iMac repair and performance upgrades"
-      image="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80"
-      features={[
-        "Screen repair and replacement",
-        "Hard drive upgrades to SSD",
-        "RAM upgrades",
-        "Graphics card issues",
-        "Power supply replacement",
-        "Cooling system repair",
-        "Software optimization",
-        "Hardware diagnostics"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
+
 }

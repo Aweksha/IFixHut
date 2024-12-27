@@ -1,21 +1,14 @@
-import ServicePage from '../../components/ServicePage';
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
 
 export default function MacBookRepair() {
+  const service = services.find(s => s.id === 'macbook-repair')!;
   return (
-    <ServicePage
-      title="MacBook Repair & Upgrade"
-      description="Professional MacBook repair and upgrade services"
-      image="https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&q=80"
-      features={[
-        "Screen replacement and repair",
-        "Battery replacement",
-        "Logic board repair",
-        "RAM and SSD upgrades",
-        "Keyboard replacement",
-        "Water damage repair",
-        "macOS optimization",
-        "Data recovery"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
+
 }

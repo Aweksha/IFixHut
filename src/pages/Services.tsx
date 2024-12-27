@@ -1,6 +1,13 @@
 import { Smartphone, Laptop, Monitor, Cpu, HardDrive, Wifi, Battery, Wrench } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
-const services = [
+interface Service {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+export const services: Service[] = [
   {
     icon: <Smartphone className="w-8 h-8" />,
     title: "Smartphone Repair",
