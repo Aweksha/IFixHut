@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body{
+    scroll-behavior: smooth !important;
+    scrollbar-width: 20px !important;
+    scrollbar-color: #414a4c !important;
+}

@@ -29,7 +29,7 @@ export default function App() {
   return (
     <Router>
       {/* Apply the fixed background image */}
-      <div className='bg-slate-950'>
+      <div className='bg-slate-950 scroll-smooth'>
         <Navbar />
         <main className="flex-grow">
           <Suspense fallback={<LoadingSpinner />}>
