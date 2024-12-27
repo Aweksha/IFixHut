@@ -1,21 +1,15 @@
-import ServicePage from '../../components/ServicePage';
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
+
 
 export default function IPhoneRepair() {
+  const service = services.find(s => s.id === 'iphone-repair')!;
   return (
-    <ServicePage
-      title="iPhone Repair"
-      description="Expert iPhone repair services for all models"
-      image="https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&q=80"
-      features={[
-        "Screen replacement",
-        "Battery replacement",
-        "Camera repair",
-        "Charging port repair",
-        "Water damage treatment",
-        "Button replacement",
-        "Speaker repair",
-        "iOS troubleshooting"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
+
 }

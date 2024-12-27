@@ -1,21 +1,15 @@
-import ServicePage from '../../components/ServicePage';
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
+
 
 export default function LaptopRepair() {
+  const service = services.find(s => s.id === 'laptop-repair')!;
   return (
-    <ServicePage
-      title="Laptop Repair & Upgrade"
-      description="Comprehensive laptop repair and upgrade solutions"
-      image="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80"
-      features={[
-        "Screen replacement",
-        "Keyboard and touchpad repair",
-        "Battery replacement",
-        "RAM and storage upgrades",
-        "Motherboard repair",
-        "DC jack repair",
-        "Hinge repair",
-        "Performance optimization"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
+
 }

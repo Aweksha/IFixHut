@@ -11,7 +11,7 @@ return (
     transition={{ duration: 0.5 }}
     >
     <Wrench className="h-8 w-8 text-blue-600" />
-    <span className="text-3xl font-bold text-gray-900">IFIXHUT</span>
+    <span className="text-3xl font-bold text-gray-900"><span className='text-red-600'>IFIX</span>HUT</span>
     </motion.div>
 
     <motion.div

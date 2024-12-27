@@ -1,21 +1,15 @@
-import ServicePage from '../../components/ServicePage';
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
+
 
 export default function NetworkSetup() {
+  const service = services.find(s => s.id === 'network-setup')!;
   return (
-    <ServicePage
-      title="Network & Workstation Setup"
-      description="Professional network and workstation configuration services"
-      image="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80"
-      features={[
-        "Network design and setup",
-        "Wireless network configuration",
-        "Network security implementation",
-        "Workstation deployment",
-        "Server setup",
-        "VPN configuration",
-        "Network monitoring",
-        "Remote access setup"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
+
 }

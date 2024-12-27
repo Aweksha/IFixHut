@@ -29,7 +29,7 @@ const steps = [
 
     export default function RepairProcess() {
     return (
-        <div className="relative py-16 bg-inherit border-b-2 border-slate-300">
+        <div className="relative py-16 bg-inherit ">
         <h2 className="text-4xl font-bold text-center mb-12">Repair Process</h2>
         <div className="relative max-w-4xl mx-auto">
             {/* Vertical Line */}

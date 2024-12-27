@@ -31,7 +31,7 @@ export default function App() {
       {/* Apply the fixed background image */}
       <div className='bg-slate-950'>
         <Navbar />
-        <main className="flex-grow backdrop-blur-sm bg-slate-800 bg-opacity-80">
+        <main className="flex-grow">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Routes */}

@@ -1,21 +1,14 @@
-import ServicePage from '../../components/ServicePage';
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
 
 export default function IPadRepair() {
+  const service = services.find(s => s.id === 'ipad-repair')!;
   return (
-    <ServicePage
-      title="iPad Repair"
-      description="Professional iPad repair and maintenance services"
-      image="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80"
-      features={[
-        "Screen replacement",
-        "Battery service",
-        "Charging problems",
-        "Button repairs",
-        "Camera issues",
-        "Audio problems",
-        "Water damage treatment",
-        "Software troubleshooting"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
+
 }

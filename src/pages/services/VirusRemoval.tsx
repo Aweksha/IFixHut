@@ -1,21 +1,15 @@
-import ServicePage from '../../components/ServicePage';
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
+
 
 export default function VirusRemoval() {
+  const service = services.find(s => s.id === 'virus-removal')!;
   return (
-    <ServicePage
-      title="Virus/Malware Removal"
-      description="Professional virus and malware removal services"
-      image="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80"
-      features={[
-        "Virus and malware scanning",
-        "Spyware removal",
-        "Ransomware removal",
-        "System cleanup",
-        "Security software installation",
-        "Firewall configuration",
-        "Browser security setup",
-        "Security best practices training"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
+
 }

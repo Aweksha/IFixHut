@@ -1,21 +1,13 @@
-import ServicePage from '../../components/ServicePage'
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
 
 export default function CustomGamingPC() {
+  const service = services.find(s => s.id === 'custom-gaming-pc')!;
   return (
-    <ServicePage
-      title="Custom Gaming PC Builds"
-      description="Professional custom gaming computer building services"
-      image="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&q=80"
-      features={[
-        "Custom build consultation",
-        "High-end gaming components",
-        "Liquid cooling setup",
-        "RGB lighting design",
-        "Cable management",
-        "Overclocking setup",
-        "Benchmark testing",
-        "Windows optimization"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
 }

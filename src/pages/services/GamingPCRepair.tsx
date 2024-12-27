@@ -1,21 +1,15 @@
-import ServicePage from '../../components/ServicePage';
+import { services } from '../../data/services';
+import ServiceLayout from '../../components/services/ServiceLayout';
+import Consultation from '../../components/Consultation';
+
 
 export default function GamingPCRepair() {
+  const service = services.find(s => s.id === 'gaming-pc-repair')!;
   return (
-    <ServicePage
-      title="Gaming PC Repair"
-      description="Specialized repair services for gaming computers"
-      image="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&q=80"
-      features={[
-        "GPU troubleshooting",
-        "Cooling system optimization",
-        "Power supply issues",
-        "Performance tuning",
-        "RGB lighting repair",
-        "Overclocking assistance",
-        "Game optimization",
-        "Hardware upgrades"
-      ]}
-    />
+    <>
+      <ServiceLayout service={service} />;
+      <Consultation/>
+    </>
   );
+
 }

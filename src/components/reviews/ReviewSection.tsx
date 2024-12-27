@@ -5,8 +5,8 @@ import { ReducedMotion } from '../animations/ReducedMotion';
 
 export default memo(function ReviewsSection() {
     return (
-        <ReducedMotion className="bg-slate-100 py-16">
-        <div className="max-w-7xl mx-auto px-4">
+        <ReducedMotion className="bg-slate-50 py-16 shadow-slate-200 shadow-inner rounded-s-2xl p-4">
+        <div className="max-w-7xl mx-auto px-4 ">
             <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
             <p className="text-gray-600">Read reviews from our satisfied customers</p>

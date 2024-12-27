@@ -5,6 +5,7 @@ import ServiceCard from "../components/services/ServiceCard";
 import { FadeIn } from "../components/animations/FadeIn";
 
 import hero from '../assets/hero.webp'
+import Consultation from "../components/Consultation";
 
 // Lazy load components that are below the fold
 const RepairProcess = lazy(() => import("../components/RepairProcess"));
@@ -38,6 +39,7 @@ export default function Home() {
       <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading...</div>}>
         <TechniciansSection />
         <RepairProcess />
+        <Consultation/>
         <ReviewsSection />
       </Suspense>
 
