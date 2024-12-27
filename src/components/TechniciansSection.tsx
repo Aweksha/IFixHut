@@ -8,7 +8,7 @@ export default function TechniciansSection() {
     return (
         <ReducedMotion>
             <section className="py-16 bg-white">
-            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-4">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-28 px-4">
                 <div className="grid grid-cols-2 gap-4 lg:w-1/2">
                 <OptimizedImage
                     src={techinican1}

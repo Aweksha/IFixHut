@@ -1,6 +1,7 @@
 import { pcBuilds } from '../data/pcBuilds';
 import Hero from '../components/Hero';
 import PCBuildCard from '../components/PCBuildCard';
+import Consultation from '../components/Consultation';
 
 export default function CustomPC() {
   return (
@@ -19,6 +20,7 @@ export default function CustomPC() {
           ))}
         </div>
       </div>
+      <Consultation/>
     </div>
   );
 }

@@ -30,10 +30,11 @@ const steps = [
     export default function RepairProcess() {
     return (
         <div className="relative py-16 ">
-        <h2 className="text-4xl font-bold text-center mb-12">Repair Process</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center ">Repair Process</h2>
+        <p className="text-gray-600 text-center  mb-12 pb-5 border-b-[1px] border-slate-300">Our step by step process guide</p>
         <div className="relative max-w-4xl mx-auto">
             {/* Vertical Line */}
-            <div className="absolute sm: hidden lg:flex z-10 left-1/2 transform -translate-x-1/2 top-0 h-full w-2 rounded-2xl bg-slate-500" />
+            <div className="absolute sm: hidden lg:flex z-10 left-1/2 transform-translate-x-1/2 top-0 h-full w-4 rounded-md bg-slate-400 shadow-2xl" />
 
             {/* Steps */}
             <div className="space-y-16">
@@ -49,13 +50,13 @@ const steps = [
                 viewport={{ once: true, amount: .3 }}
                 >
                 {/* Step Content */}
-                <div className="bg-white shadow-xl p-6 rounded-lg max-w-md w-full bg-blue-900/5 backdrop-blur-sm">
-                    <h3 className="text-xl font-bold border-blue-200 border-b-2 py-1">{step.title}</h3>
+                <div className="shadow-2xl p-6 px-8 rounded-lg max-w-md w-full bg-slate-950/5">
+                    <h3 className="text-xl font-bold border-slate-300 border-b-2 py-1">{step.title}</h3>
                     <p className="mt-2 text-gray-600">{step.description}</p>
                 </div>
 
                 {/* Step Number */}
-                <div className="hidden lg:flex items-center justify-center w-12 h-12 bg-blue-500 text-white text-lg font-bold rounded-full mx-6">
+                <div className="hidden lg:flex items-center justify-center w-12 h-12 bg-blue-600 text-white text-lg font-bold rounded-full mx-6">
                     {step.id}
                 </div>
                 </motion.div>

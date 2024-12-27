@@ -1,19 +1,19 @@
 import { Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
-import TechniciansSection from '../components/TechniciansSection';
+import TechniciansSection from '../../components/TechniciansSection';
+import { ExpertiseStats } from '../../components/about/ExpertiseStats';
 
 export default function About() {
   return (
-    <div 
-    className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* About Section */}
       <div className="max-w-7xl mx-auto py-16 px-4">
         <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0}}
-        transition={{ duration: 0.5 }}
-        className="text-center mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
         >
           <h1 className="text-4xl font-bold mb-4">About <span className='text-red-600'>IFIX</span>HUT</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -57,29 +57,9 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Expertise</h2>
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">10+</div>
-              <div className="text-gray-600">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">50K+</div>
-              <div className="text-gray-600">Repairs Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
-              <div className="text-gray-600">Custom PCs Built</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">99%</div>
-              <div className="text-gray-600">Satisfied Customers</div>
-            </div>
-          </div>
-        </div>
+        <ExpertiseStats />
 
-        <div className="text-center">
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-gray-600 mb-8">Contact us today for all your tech repair and custom PC needs</p>
           <Link to="/contact" className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700">

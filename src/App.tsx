@@ -8,7 +8,7 @@ import { ScrollToTopButton } from './components/buttons/ScrollToTopButton';
 // Lazy load main pages
 const Home = lazy(() => import('./pages/Home'));
 const CustomPC = lazy(() => import('./pages/CustomPC'));
-const About = lazy(() => import('./pages/About'));
+const About = lazy(() => import('./pages/about/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 // Lazy load service pages
