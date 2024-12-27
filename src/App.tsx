@@ -6,7 +6,6 @@ import Footer from './components/Footer/Footer';
 
 // Lazy load main pages
 const Home = lazy(() => import('./pages/Home'));
-const Services = lazy(() => import('./pages/Services'));
 const CustomPC = lazy(() => import('./pages/CustomPC'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -37,7 +36,6 @@ export default function App() {
             <Routes>
               {/* Main Routes */}
               <Route path="/" element={<Home />} />
-              <Route path="/services" element={<Services />} />
               <Route path="/custom-pc" element={<CustomPC />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />

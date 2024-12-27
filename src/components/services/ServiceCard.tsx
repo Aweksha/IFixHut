@@ -13,8 +13,6 @@ interface ServiceCardProps {
 export default memo(function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <motion.div
-      whileHover={{ transform: 'scale(1.02)' }}
-      whileTap={{ transform: 'scale(0.98)' }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{
         duration: 0.2,
