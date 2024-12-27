@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={logo} alt="IFIXHUT Logo" className="lg:h-24 lg:w-40 h-16 w-28" />
+              <img src={logo} alt="IFIXHUT Logo" className="lg:h-24 lg:w-40 h-16 w-28 pb-1" />
             </Link>
           </div>
 
