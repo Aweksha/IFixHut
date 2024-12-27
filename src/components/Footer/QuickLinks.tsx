@@ -22,7 +22,7 @@ const links = [
             >
                 <Link 
                 to={link.path}
-                className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                className="text-gray-200 hover:text-blue-400 transition-colors duration-200"
                 >
                 {link.name}
                 </Link>

@@ -19,9 +19,9 @@ const services = [
 
     export default function ServiceLinks() {
     return (
-        <div className="space-y-4 border-white border-r-2 border-l-2 px-4">
+        <div className="space-y-4 border-slate-600 border-r-2 border-l-2 px-4">
         <h3 className="text-xl font-bold text-white">Our Services</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
             {services.map((service, index) => (
             <motion.div
                 key={service.path}
@@ -31,7 +31,7 @@ const services = [
             >
                 <Link 
                 to={service.path}
-                className="text-gray-300 hover:text-blue-400 transition-colors duration-200 block"
+                className=" text-md text-gray-200 hover:text-blue-500 transition-colors duration-200 block"
                 >
                 {service.name}
                 </Link>

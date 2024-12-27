@@ -13,18 +13,18 @@ export default function ContactInfo() {
         >
             <div className="flex items-start space-x-3">
             <MapPin className="w-5 h-5 text-blue-400 mt-1" />
-            <p className="text-gray-300">
+            <p className="text-gray-200">
                 2310 Virginia Pkwy<br />
                 McKinney, TX 75071
             </p>
             </div>
             <div className="flex items-center space-x-3">
             <Phone className="w-5 h-5 text-blue-400" />
-            <p className="text-gray-300">469-300-3936</p>
+            <p className="text-gray-200">469-300-3936</p>
             </div>
             <div className="flex items-center space-x-3">
             <Mail className="w-5 h-5 text-blue-400" />
-            <p className="text-gray-300">info@ifixhut.com</p>
+            <p className="text-gray-200">info@ifixhut.com</p>
             </div>
         </motion.div>
         </div>

@@ -1,6 +1,7 @@
 import { Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
+import TechniciansSection from '../components/TechniciansSection';
 
 export default function About() {
   return (
@@ -85,6 +86,7 @@ export default function About() {
             Contact Us
           </Link>
         </div>
+        <TechniciansSection/>
       </div>
     </div>
   );
