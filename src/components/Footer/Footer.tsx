@@ -4,6 +4,7 @@ import ServiceLinks from './ServiceLinks';
 import ContactInfo from './ContactInfo';
 import LocationMap from './LocationMap';
 import SocialLinks from './SocialLinks';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -53,9 +54,13 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400"
+          className="flex justify-around items-center mt-12 pt-10 border-t border-slate-600 text-center text-gray-400 text-lg"
         >
           <p>© {new Date().getFullYear()} IFIXHUT. All rights reserved.</p>
+          <div className="flex gap-10">
+            <Link to="#" className='text-lg hover:text-red-700'>Terms of Service</Link>
+            <Link to="#" className='text-lg hover:text-red-700'>Privacy Policy</Link>
+          </div>
         </motion.div>
       </div>
     </footer>
