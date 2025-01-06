@@ -154,7 +154,7 @@ export default memo(function MacBookRepair() {
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-gray-600 mb-8">Contact us now for a free diagnostic consultation</p>
           <a
-            href="/contact"
+            href="/book-appointment"
             className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Schedule Repair

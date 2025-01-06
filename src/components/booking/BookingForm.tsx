@@ -276,7 +276,7 @@ export default function BookingForm() {
                 <Phone className="w-8 h-8 text-red-600 mr-4" />
                 <div>
                   <h3 className="font-semibold">Telephone</h3>
-                  <p className="text-slate-300">469 300 3936</p>
+                  <a href='tel:+14693003936' className="text-slate-300 underline hover:text-blue-400">+1 469 300 3936</a>
                 </div>
               </div>
             </motion.div>

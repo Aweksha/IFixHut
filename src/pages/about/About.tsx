@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import TechniciansSection from '../../components/TechniciansSection';
 import { ExpertiseStats } from '../../components/about/ExpertiseStats';
+import Consultation from '../../components/Consultation';
 
 export default function About() {
   return (
@@ -68,6 +69,7 @@ export default function About() {
         </div>
         <TechniciansSection/>
       </div>
+      <Consultation/>
     </div>
   );
 }

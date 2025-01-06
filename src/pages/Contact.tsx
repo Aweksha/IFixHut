@@ -112,7 +112,7 @@ export default function Contact() {
                 <Phone className="w-6 h-6 text-blue-600" />
                 <div>
                   <h3 className="font-semibold">Telephone</h3>
-                  <p className="text-gray-600">469 300 3936</p>
+                  <a href='tel:+14693003936' className="text-gray-600 hover:text-blue-600 underline">+1 469 300 3936</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
