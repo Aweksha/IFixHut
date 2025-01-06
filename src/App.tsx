@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import LoadingSpinner from './components/LoadingSpinner';
 import Footer from './components/Footer/Footer';
 import { ScrollToTopButton } from './components/buttons/ScrollToTopButton';
+import ScrollToTop from './components/ScrollToTop';
 
 // Lazy load main pages
 const Home = lazy(() => import('./pages/Home'));
@@ -32,6 +33,7 @@ const NetworkSetup = lazy(() => import('./pages/services/NetworkSetup'));
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       {/* Apply the fixed background image */}
       <div className='bg-slate-950 scroll-smooth'>
         <Navbar />

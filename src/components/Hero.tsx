@@ -28,11 +28,12 @@ export default memo(function Hero({
         priority={true} // Hero image should load immediately
       />
       <motion.div
-      initial = {{opacity: 0, x: 40}}
-      animate = {{ opacity: 1, x: 0}}
-      transition={{duration: 0.5}}
-      className="absolute inset-0 bg-black bg-opacity-60">
-        <div className="max-w-7xl mx-auto h-full flex items-center px-4">
+      className="absolute inset-0 bg-black/60">
+        <motion.div
+        initial = {{opacity: 0, x: 40}}
+        animate = {{ opacity: 1, x: 0}}
+        transition={{duration: 1}}
+        className="max-w-7xl mx-auto h-full flex items-center px-4">
           <div className="text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
             <p className="text-lg md:text-xl mb-8">{subtitle}</p>
@@ -45,7 +46,7 @@ export default memo(function Hero({
               </Link>
             )}
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </ReducedMotion>
   );

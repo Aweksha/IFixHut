@@ -31,7 +31,7 @@ export default function Consultation() {
             {/* React Router Link as Button */}
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} transition={{duration: .2}} className="z-[1]">
                 <Link
-                to="/contact"
+                to="/book-appointment"
                 className="bg-red-500 text-white text-lg md:text-xl font-semibold py-4 px-8 rounded-lg shadow-lg transition-all  hover:bg-white hover:text-black"
                 >
                 Free Consultation

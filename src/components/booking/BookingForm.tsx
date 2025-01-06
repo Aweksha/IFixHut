@@ -127,7 +127,7 @@ export default function BookingForm() {
   };
 
   return (
-    <div className="bg-slate-200">
+    <div className="bg-slate-100">
       <div className="max-w-2xl mx-auto p-6">
         <ProgressBar currentStep={step} totalSteps={4} />
 

@@ -15,7 +15,8 @@ export default function Navbar() {
     <motion.nav
       initial={{ top: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: .5 }}
+      transition={{ duration: .6 }}
+      viewport={{once: false}}
       className="sticky top-0 rounded-bl-2xl rounded-br-2xl bg-slate-800/80 z-50 shadow-slate-900 shadow-2xl text-white py-2"
     >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-4">
