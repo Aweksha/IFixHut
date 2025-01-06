@@ -55,6 +55,7 @@ const repairProcess = [
   }
 ];
 
+
 export default memo(function MacBookRepair() {
   return (
     <ReducedMotion className="min-h-screen bg-gray-50">

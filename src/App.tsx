@@ -10,6 +10,7 @@ const Home = lazy(() => import('./pages/Home'));
 const CustomPC = lazy(() => import('./pages/CustomPC'));
 const About = lazy(() => import('./pages/about/About'));
 const Contact = lazy(() => import('./pages/Contact'));
+const BookingForm = lazy(() => import('./components/booking/BookingForm'));
 
 // Lazy load service pages
 const MacBookRepair = lazy(() => import('./pages/services/MacBookRepair'));
@@ -26,6 +27,8 @@ const GamingPCRepair = lazy(() => import('./pages/services/GamingPCRepair'));
 const CustomGamingPC = lazy(() => import('./pages/services/CustomGamingPC'));
 const NetworkSetup = lazy(() => import('./pages/services/NetworkSetup'));
 
+
+
 export default function App() {
   return (
     <Router>
@@ -40,6 +43,7 @@ export default function App() {
               <Route path="/custom-pc" element={<CustomPC />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/book-appointment" element={<BookingForm />} />
 
               {/* Service Routes */}
               <Route path="/services/macbook-repair" element={<MacBookRepair />} />

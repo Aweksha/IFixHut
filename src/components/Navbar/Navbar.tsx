@@ -16,9 +16,9 @@ export default function Navbar() {
       initial={{ top: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .5 }}
-      className="sticky top-0 rounded-bl-2xl rounded-br-2xl bg-slate-700/50 backdrop-blur-md z-50 shadow-slate-900 shadow-2xl text-white"
+      className="sticky top-0 rounded-bl-2xl rounded-br-2xl bg-slate-800/80 z-50 shadow-slate-900 shadow-2xl text-white py-2"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
@@ -33,6 +33,12 @@ export default function Navbar() {
               <NavLink to="/custom-pc">Custom PC</NavLink>
               <NavLink to="/about">About Us</NavLink>
               <NavLink to="/contact">Contact</NavLink>
+              <Link
+              to="/book-appointment"
+              className="bg-blue-600 hover:bg-blue-300/20 px-4 py-2 rounded-lg font-medium transition-colors"
+            >
+              Book Now
+            </Link>
             </div>
           </div>
 
@@ -52,6 +58,12 @@ export default function Navbar() {
             <NavLink to="/custom-pc">Custom PC</NavLink>
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/contact">Contact</NavLink>
+            <Link
+              to="/book-appointment"
+              className="block bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition-colors text-center"
+            >
+              Book Now
+            </Link>
           </div>
         </div>
       )}

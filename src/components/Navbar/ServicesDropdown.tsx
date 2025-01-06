@@ -57,7 +57,7 @@ const services = [
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute left-0 mt-2 w-72 bg-slate-950/70 backdrop-blur-md rounded-lg shadow-xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800 border-b-2 border-slate-800"
+                className="absolute left-0 mt-2 w-72 bg-slate-950/80 rounded-lg shadow-xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800 border-b-2 border-slate-800"
                 style={{
                 scrollbarWidth: 'thin',
                 scrollbarColor: '#4B5563 #1F2937'
