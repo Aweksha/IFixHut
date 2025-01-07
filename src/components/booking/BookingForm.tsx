@@ -258,21 +258,21 @@ export default function BookingForm() {
               duration: .5,
             }}
             className="max-full flex flex-col lg:flex-row  justify-between items-center gap-10">
-              <div className="flex items-center bg-slate-200/10 px-8 py-5">
+              <div className="flex items-center bg-slate-200/10 px-8 py-5 rounded-lg">
                 <Mail className="w-8 h-8 text-red-600 mr-4" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
                   <p className="text-slate-300">info@ifixhut.com</p>
                 </div>
               </div>
-              <div className="flex items-center bg-slate-200/10 px-8 py-5">
+              <div className="flex items-center bg-slate-200/10 px-8 py-5 rounded-lg">
                 <MapPin className="w-8 h-8 text-red-600 mr-4" />
                 <div className=''>
                   <h3 className="font-semibold">Address</h3>
-                  <p className="text-slate-300">2310 Virginia Pkwy, McKinney, TX 75071</p>
+                  <p className="text-slate-300">2310 Virginia Pkwy,<br className='flex lg:hidden'/> McKinney, TX 75071</p>
                 </div>
               </div>
-              <div className="flex items-center bg-slate-200/10 px-10 py-5">
+              <div className="flex items-center bg-slate-200/10 px-10 py-5 rounded-lg">
                 <Phone className="w-8 h-8 text-red-600 mr-4" />
                 <div>
                   <h3 className="font-semibold">Telephone</h3>

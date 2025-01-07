@@ -12,18 +12,18 @@ export default function ContactInfo() {
             transition={{ duration: 0.5 }}
         >
             <div className="flex items-start space-x-3">
-            <MapPin className="w-5 h-5 text-blue-400 mt-1" />
+            <MapPin className="w-6 h-6 text-blue-400 mt-1" />
             <p className="text-gray-200">
-                2310 Virginia Pkwy<br />
+                2310 Virginia Pkwy<br/>
                 McKinney, TX 75071
             </p>
             </div>
             <div className="flex items-center space-x-3">
-            <Phone className="w-5 h-5 text-blue-400" />
-            <p className="text-gray-200">469-300-3936</p>
+            <Phone className="w-6 h-6 text-blue-400" />
+            <a href='tel:+14693003936' className="text-gray-200 underline hover:text-blue-500">+1 469 300 3936</a>
             </div>
             <div className="flex items-center space-x-3">
-            <Mail className="w-5 h-5 text-blue-400" />
+            <Mail className="w-6 h-6 text-blue-400" />
             <p className="text-gray-200">info@ifixhut.com</p>
             </div>
         </motion.div>
