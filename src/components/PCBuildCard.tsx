@@ -8,9 +8,10 @@ interface PCBuildCardProps {
     icon: LucideIcon;
     text: string;
   }>;
+  onClick?: () => void;
 }
 
-export default function PCBuildCard({ title, description, features }: PCBuildCardProps) {
+export default function PCBuildCard({ title, description, features, onClick }: PCBuildCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -37,14 +38,15 @@ export default function PCBuildCard({ title, description, features }: PCBuildCar
             );
           })}
         </ul>
-        <motion.a
-          href="/contact"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="block text-center bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
-        >
-          Get Started
-        </motion.a>
+
+        <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={onClick}
+        className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        Get Started
+      </motion.button>
       </div>
     </motion.div>
   );
