@@ -98,7 +98,7 @@ const services = [
 
     export default function Services() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800"
+        <div className="min-h-screen"
         style={{
             backgroundImage : `url(${consult})`,
             backgroundPosition : `center`,
@@ -141,7 +141,7 @@ const services = [
                         key={index}
                         variants={itemVariants}
                         whileHover={{scale : 1.1}}
-                        className="bg-slate-800/10 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 group"
+                        className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 group"
                         >
                         <div className="flex items-start space-x-4">
                             <div className="p-3 bg-blue-600/10 rounded-lg group-hover:bg-blue-200/20 transition-colors">
