@@ -9,17 +9,17 @@ import FeaturedService from '../../components/services/FeaturedService';
 const services = [
   {
     title: 'Hard Drive Recovery',
-    price: 'From $99',
+    price: 'Prices Vary',
     description: 'Recover data from failed drives'
   },
   {
     title: 'SSD Recovery',
-    price: 'From $149',
+    price: 'Prices Vary',
     description: 'Flash storage data recovery'
   },
   {
     title: 'RAID Recovery',
-    price: 'From $299',
+    price: 'Prices Vary',
     description: 'Multi-disk array recovery'
   }
 ];

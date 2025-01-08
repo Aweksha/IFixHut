@@ -1,36 +1,36 @@
-import { Laptop, Smartphone, Cpu, Wrench, Tablet } from "lucide-react";
+import { Laptop, Smartphone, Cpu, Wrench} from "lucide-react";
 import type { LucideIcon } from 'lucide-react';
 
 interface Service {
     icon: LucideIcon;
     title: string;
     description: string;
+    link: string;
     }
 
-    export const services: Service[] = [
+export const services: Service[] = [
     {
         icon: Smartphone,
         title: "Phone Repair",
         description: "Screen replacement, battery service, and more",
+        link: "/services/cellphone-repair",
     },
     {
         icon: Laptop,
         title: "Laptop Repair",
         description: "Hardware fixes, upgrades, and maintenance",
+        link: "/services/laptop-repair",
     },
     {
         icon: Cpu,
         title: "Custom PC Builds",
         description: "Tailored gaming and workstation builds",
+        link: "/custom-pc",
     },
     {
         icon: Wrench,
-        title: "General Repairs",
-        description: "Diagnostics and repairs for all tech",
-    },
-    {
-        icon: Tablet,
-        title: "Tablet Repair",
-        description: "From cracked screens to faulty batteries, we offer high-quality repairs for all tablet brands, including iPads and Android tablets.",
+        title: "Macbook Repairs",
+        description: "Diagnostics and repairs for all types of Macbook",
+        link: "/services/macbook-repair",
     },
 ];

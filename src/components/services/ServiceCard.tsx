@@ -8,12 +8,13 @@ interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
+  link: string;
 }
 
-export default memo(function ServiceCard({ icon, title, description }: ServiceCardProps) {
+export default memo(function ServiceCard({ icon, title, description, link }: ServiceCardProps) {
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.98 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{
@@ -23,7 +24,7 @@ export default memo(function ServiceCard({ icon, title, description }: ServiceCa
       className="bg-neutral-400/10 p-6 rounded-lg shadow-2xl shadow-slate-950 text-center border-y-[1px] border-slate-900"
     >
       <ServiceIcon icon={icon} />
-      <ServiceContent title={title} description={description} />
+      <ServiceContent title={title} description={description} link={link} />
     </motion.div>
   );
 });

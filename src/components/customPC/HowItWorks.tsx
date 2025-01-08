@@ -15,8 +15,8 @@ export default function HowItWorks() {
     },
     {
       icon: Truck,
-      title: 'Delivery',
-      description: 'Safe and secure delivery to your doorstep'
+      title: 'Pickup',
+      description: 'Once the device is ready, you can come pick it up'
     },
     {
       icon: CheckCircle,
