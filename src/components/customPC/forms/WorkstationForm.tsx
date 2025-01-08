@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cpu, HardDrive, Monitor, AlertCircle } from 'lucide-react';
+import { Cpu, HardDrive, Monitor, AlertCircle, User, Mail, Phone, DollarSign } from 'lucide-react';
 import { WorkstationFormData, FormProps } from '../../../data/forms';
 import { formVariants } from '../forms/formanimations';
 
@@ -176,57 +176,61 @@ export default function WorkstationForm({ step, onNext, onBack, onSubmit }: Form
           >
             <h3 className="text-xl font-semibold">Contact Information</h3>
             <div className="space-y-4">
-              <div>
+              <div className='relative'>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Full Name
                 </label>
+                <User className="absolute left-2 top-1/2 text-gray-400" />
                 <input
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-2 border rounded-lg pl-10"
                   placeholder="Enter your full name"
                 />
                 {renderError('name')}
               </div>
 
-              <div>
+              <div className='relative'>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Email
                 </label>
+                <Mail className="absolute left-2 top-1/2 text-gray-400" />
                 <input
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-2 border rounded-lg pl-10"
                   placeholder="Enter your email"
                 />
                 {renderError('email')}
               </div>
 
-              <div>
+              <div className='relative'>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Phone
                 </label>
+                <Phone className="absolute left-2 top-1/2 text-gray-400" />
                 <input
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-2 border rounded-lg pl-10"
                   placeholder="Enter your phone number"
                 />
                 {renderError('phone')}
               </div>
 
-              <div>
+              <div className='relative'>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Budget Range
                 </label>
+                <DollarSign className="absolute left-2 top-1/2 text-gray-400" />
                 <input
                   type="text"
                   value={formData.budget}
                   onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-2 border rounded-lg pl-10"
                   placeholder="Enter your budget"
                 />
                 {renderError('budget')}

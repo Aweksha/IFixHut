@@ -34,3 +34,12 @@ html {
     background: #2d3436 !important;
     cursor: grab;
 }
+
+/* Add this to your global CSS file */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar in WebKit-based browsers */
+}
+.scrollbar-hide {
+    -ms-overflow-style: none; /* Hides the scrollbar in Internet Explorer 10+ */
+    scrollbar-width: none; /* Hides the scrollbar in Firefox */
+}

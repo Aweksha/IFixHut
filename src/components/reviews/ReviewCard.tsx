@@ -2,14 +2,17 @@ import { memo } from 'react';
 import { type Review } from '../../data/reviews';
 import StarRating from './StarRating';
 import OptimizedImage from '../OptimizedImage';
+import { motion } from 'framer-motion';
 
 interface ReviewCardProps {
-  review: Review;
+    review: Review;
 }
 
 export default memo(function ReviewCard({ review }: ReviewCardProps) {
     return (
-        <div className="bg-white p-6 rounded-lg shadow-lg">
+        <motion.div className="bg-white p-6 rounded-lg shadow-lg w-80 h-60 flex-shrink-0 snap-center"
+        whileHover = {{scale: 1.03}}
+        >
         <div className="flex items-center mb-4">
             {review.photoUrl ? (
             <OptimizedImage
@@ -33,6 +36,6 @@ export default memo(function ReviewCard({ review }: ReviewCardProps) {
         <time className="text-sm text-gray-500">
             {new Date(review.date).toLocaleDateString()}
         </time>
-        </div>
+        </motion.div>
     );
 });

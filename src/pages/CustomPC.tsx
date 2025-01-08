@@ -106,16 +106,16 @@ export default function CustomPC() {
               </motion.div>
           </div>
         </div>
-        <hr className='border-2 border-slate-500 rounded-2xl'/>
+        <hr className='border-2 border-slate-400 rounded-2xl'/>
         {/* Why Custom PC Section */}
         <WhyCustomPC />
-        <hr className='border-2 border-slate-500 rounded-2xl'/>
+        <hr className='border-2 border-slate-400 rounded-2xl'/>
         {/* How It Works */}
         <HowItWorks />
-        <hr className='border-2 border-slate-500 rounded-2xl'/>
+        <hr className='border-2 border-slate-400 rounded-2xl'/>
         {/* Testimonials */}
         <ReviewSection />
-        <hr className='border-2 border-slate-500 rounded-2xl'/>
+        <hr className='border-2 border-slate-400 rounded-2xl'/>
         {/* FAQ Section */}
         <CustomPCFAQ />
       </div>

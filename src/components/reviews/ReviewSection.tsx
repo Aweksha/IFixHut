@@ -12,11 +12,14 @@ export default memo(function ReviewsSection() {
             <p className="text-gray-600">Read reviews from our satisfied customers</p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reviews.map(review => (
-                <ReviewCard key={review.id} review={review} />
-            ))}
+            <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory px-4">
+                <div className="inline-flex gap-10 snap-start">
+                    {reviews.map(review => (
+                    <ReviewCard key={review.id} review={review} />
+                    ))}
+                </div>
             </div>
+
 
             <div className="text-center mt-12">
             <a

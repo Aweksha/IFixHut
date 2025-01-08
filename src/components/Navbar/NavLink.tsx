@@ -4,10 +4,10 @@ interface NavLinkProps {
     to: string;
     children: React.ReactNode;
     className?: string;
-    clickValue?:string;
+    clickValue?:() => void;
 }
 
-    export default function NavLink({ to, children, className, clickValue = '' }: NavLinkProps) {
+    export default function NavLink({ to, children, className, clickValue }: NavLinkProps) {
     return (
         <Link
         to={to}

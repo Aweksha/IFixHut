@@ -14,6 +14,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const BookingForm = lazy(() => import('./components/booking/BookingForm'));
 
 // Lazy load service pages
+const ServicesOverview = lazy(() => import('./pages/services/main/ServicesOverview'));
 const MacBookRepair = lazy(() => import('./pages/services/MacBookRepair'));
 const IMacRepair = lazy(() => import('./pages/services/IMacRepair'));
 const LaptopRepair = lazy(() => import('./pages/services/LaptopRepair'));
@@ -24,8 +25,8 @@ const DeviceTuneup = lazy(() => import('./pages/services/DeviceTuneup'));
 const IPhoneRepair = lazy(() => import('./pages/services/IPhoneRepair'));
 const CellphoneRepair = lazy(() => import('./pages/services/CellphoneRepair'));
 const IPadRepair = lazy(() => import('./pages/services/IPadRepair'));
-const GamingPCRepair = lazy(() => import('./pages/services/GamingPCRepair'));
-const CustomGamingPC = lazy(() => import('./pages/services/CustomGamingPC'));
+const GamingPCRepair = lazy(() => import('./pages/services/PCRepair'));
+const PCRepair = lazy(() => import('./pages/services/PCRepair'));
 const NetworkSetup = lazy(() => import('./pages/services/NetworkSetup'));
 
 
@@ -45,6 +46,7 @@ export default function App() {
               <Route path="/custom-pc" element={<CustomPC />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<ServicesOverview />} />
               <Route path="/book-appointment" element={<BookingForm />} />
 
               {/* Service Routes */}
@@ -59,7 +61,7 @@ export default function App() {
               <Route path="/services/cellphone-repair" element={<CellphoneRepair />} />
               <Route path="/services/ipad-repair" element={<IPadRepair />} />
               <Route path="/services/gaming-pc-repair" element={<GamingPCRepair />} />
-              <Route path="/services/custom-gaming-pc" element={<CustomGamingPC />} />
+              <Route path="/services/pc-repair" element={<PCRepair />} />
               <Route path="/services/network-setup" element={<NetworkSetup />} />
             </Routes>
           </Suspense>

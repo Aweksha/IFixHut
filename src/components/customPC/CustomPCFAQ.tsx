@@ -53,7 +53,7 @@ export default function CustomPCFAQ() {
                   transition={{ duration: 0.2 }}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
+                  <p className="px-6 pb-4 text-gray-600 border-t-2 border-slate-200 pt-2">{faq.answer}</p>
                 </motion.div>
               )}
             </AnimatePresence>

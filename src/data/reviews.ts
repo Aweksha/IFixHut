@@ -31,5 +31,29 @@ export const reviews: Review[] = [
     text: 'Great experience with their custom PC building service. They helped me choose the perfect components within my budget.',
     date: '2024-01-05',
     photoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80'
+},
+{
+    id: '4',
+    author: 'Mike Williams',
+    rating: 5,
+    text: 'Great experience with their custom PC building service. They helped me choose the perfect components within my budget.',
+    date: '2024-01-05',
+    photoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80'
+},
+{
+    id: '5',
+    author: 'Mike Williams',
+    rating: 5,
+    text: 'Great experience with their custom PC building service. They helped me choose the perfect components within my budget.',
+    date: '2024-01-05',
+    photoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80'
+},
+{
+    id: '6',
+    author: 'Mike Williams',
+    rating: 5,
+    text: 'Great experience with their custom PC building service. They helped me choose the perfect components within my budget.',
+    date: '2024-01-05',
+    photoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80'
 }
 ];
