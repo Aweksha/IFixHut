@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 // Lazy load components that are below the fold
 const RepairProcess = lazy(() => import("../components/RepairProcess"));
-const ReviewsSection = lazy(() => import('../components/reviews/ReviewSection'));
+const ReviewsSection = lazy(() => import('../components/reviews/GoogleReviewsSection'));
 const TechniciansSection = lazy(() => import("../components/TechniciansSection"));
 
 export default function Home() {

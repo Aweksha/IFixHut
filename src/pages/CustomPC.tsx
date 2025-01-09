@@ -6,7 +6,7 @@ import PCBuildCard from '../components/PCBuildCard';
 import CustomPCForm from '../components/customPC/CustomPCForm';
 import WhyCustomPC from '../components/customPC/WhyCustomPC';
 import CustomPCFAQ from '../components/customPC/CustomPCFAQ';
-import ReviewSection from '../components/reviews/ReviewSection';
+import ReviewSection from '../components/reviews/GoogleReviewsSection';
 import HowItWorks from '../components/customPC/HowItWorks';
 import Consultation from '../components/Consultation';
 import { MapPin, Phone, Mail } from 'lucide-react';

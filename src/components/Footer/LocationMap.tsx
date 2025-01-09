@@ -16,7 +16,7 @@
 
 export default function LocationMap() {
   return (
-    <div className="h-[400px] w-full rounded-lg overflow-hidden shadow-2xl">
+    <div id="map" className="h-[400px] w-full rounded-lg overflow-hidden shadow-2xl">
       <iframe
         title="IFIXHUT Locations"
         width="100%"
@@ -25,7 +25,7 @@ export default function LocationMap() {
         loading="lazy"
         allowFullScreen
         referrerPolicy="no-referrer-when-downgrade"
-        src={`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=IFIXHUT+McKinney+TX&zoom=10`}
+        src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCN6CYLCZZoP7m_divpd0fkx4yA-vAHKes&q=IFIXHUT+McKinney+TX&zoom=10`}
       ></iframe>
     </div>
   );
