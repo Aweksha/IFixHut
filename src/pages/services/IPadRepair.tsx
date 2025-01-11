@@ -5,6 +5,7 @@ import ServiceHero from '../../components/services/ServiceHero';
 import ServiceProcess from '../../components/services/ServiceProcess';
 import { ReducedMotion } from '../../components/animations/ReducedMotion';
 import FeaturedService from '../../components/services/FeaturedService';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -209,18 +210,18 @@ export default memo(function IPadRepair() {
             <h2 className="text-4xl font-bold mb-4">Need iPad Repairs?</h2>
             <p className="text-gray-600 mb-8 text-lg">Get your iPad fixed today</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Schedule Repair
-              </a>
-              <a
-                href="/pricing"
+              </Link>
+              <Link
+                to="/pricing"
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl border border-blue-200"
               >
                 View Pricing
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>
