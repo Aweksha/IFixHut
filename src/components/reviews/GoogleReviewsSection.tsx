@@ -52,7 +52,7 @@ export default memo(function GoogleReviewsSection() {
         const fetchReviews = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('/api/reviews');
+                const response = await axios.get('https://ifixhut.vercel.app/api/reviews');
                 if (response.data.reviews) {
                     // Filter for only 5-star reviews
                     const fiveStarReviews = response.data.reviews.filter(
