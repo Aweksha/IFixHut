@@ -204,7 +204,7 @@ export default memo(function CellphoneRepair() {
           viewport={{ once: true }}
           className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-12 text-center"
         >
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&q=80')] opacity-5" />
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&q=80')] opacity-5" />
           <div className="relative z-10">
             <h2 className="text-4xl font-bold mb-4">Need Phone Repair?</h2>
             <p className="text-gray-600 mb-8 text-lg">Get your device fixed today</p>

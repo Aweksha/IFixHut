@@ -199,7 +199,7 @@ export default memo(function GoogleReviewsSection() {
                                 </AnimatePresence>
                             </div>
 
-                            {totalPages > 1 && (
+                            {/* {totalPages > 1 && (
                                 <div className="flex justify-center items-center mt-8 gap-4">
                                     <motion.button
                                         whileHover={{ scale: 1.1 }}
@@ -221,10 +221,10 @@ export default memo(function GoogleReviewsSection() {
                                         <ChevronRight className="w-6 h-6 text-gray-600" />
                                     </motion.button>
                                 </div>
-                            )}
+                            )} */}
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
