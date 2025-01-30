@@ -6,7 +6,7 @@ interface CommonIssuesProps {
     issues: CommonIssue[];
 }
 
-    export default memo(function CommonIssues({ issues }: CommonIssuesProps) {
+export default memo(function CommonIssues({ issues }: CommonIssuesProps) {
     return (
         <div className="grid gap-4 md:grid-cols-2">
         {issues.map((issue, index) => (

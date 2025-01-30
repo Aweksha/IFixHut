@@ -5,8 +5,9 @@ import LoadingSpinner from './components/LoadingSpinner';
 import Footer from './components/Footer/Footer';
 import { ScrollToTopButton } from './components/buttons/ScrollToTopButton';
 import ScrollToTop from './components/ScrollToTop';
+import { WhatsAppButton } from './components/whatsapp/WhatsAppChat';
 
-// Lazy load main pages
+// Lazy load main pages 
 const Home = lazy(() => import('./pages/Home'));
 const CustomPC = lazy(() => import('./pages/CustomPC'));
 const About = lazy(() => import('./pages/about/About'));
@@ -68,6 +69,7 @@ export default function App() {
         </main>
         <Footer />
       </div>
+      <WhatsAppButton />
       <ScrollToTopButton />
     </Router>
   );

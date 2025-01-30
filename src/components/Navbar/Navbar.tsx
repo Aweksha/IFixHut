@@ -20,7 +20,7 @@ export default function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .6 }}
       viewport={{once: false}}
-      className="sticky top-0 rounded-bl-2xl rounded-br-2xl bg-slate-800/60 z-50 shadow-slate-900 shadow-2xl text-white py-2"
+      className="sticky top-0 rounded-bl-2xl rounded-br-2xl bg-slate-600/60 z-50 shadow-slate-900 shadow-2xl text-white py-2"
     >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-4">
         <div className="flex items-center justify-between h-16">
@@ -39,7 +39,7 @@ export default function Navbar() {
               <NavLink to="/contact">Contact</NavLink>
               <Link
                 to="/book-appointment"
-                className="bg-blue-600 hover:bg-blue-300/20 px-4 py-2 rounded-lg font-medium transition-colors"
+                className="bg-blue-600 hover:bg-blue-500/80 px-4 py-2 rounded-lg font-medium transition-colors"
               >
                 Book Now
               </Link>

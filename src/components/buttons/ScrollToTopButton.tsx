@@ -29,7 +29,7 @@ export const ScrollToTopButton = memo(function ScrollToTopButton() {
         initial={{ transform: 'scale(0)' }}
         animate={{ transform: 'scale(1)' }}
         exit={{ transform: 'scale(0)' }}
-        className="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg z-50"
+        className="fixed bottom-24 right-8 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg z-40"
         aria-label="Scroll to top"
         >
         <ArrowUp className="w-6 h-6" />

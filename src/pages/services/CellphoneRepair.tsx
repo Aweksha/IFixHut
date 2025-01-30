@@ -216,12 +216,6 @@ export default memo(function CellphoneRepair() {
               >
                 Schedule Repair
               </Link>
-              <Link
-                to="/pricing"
-                className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl border border-blue-200"
-              >
-                View Pricing
-              </Link>
             </div>
           </div>
         </motion.div>

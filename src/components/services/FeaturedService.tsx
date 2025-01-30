@@ -8,7 +8,7 @@ interface FeaturedServiceProps {
     index: number;
     }
 
-    export default memo(function FeaturedService({ title, price, index }: FeaturedServiceProps) {
+export default memo(function FeaturedService({ title, price, index }: FeaturedServiceProps) {
     return (
         <motion.div
         initial={{ opacity: 0, y: 20 }}

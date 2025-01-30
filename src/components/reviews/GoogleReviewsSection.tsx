@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { memo, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react';
 import axios from 'axios';
 import { ReducedMotion } from '../animations/ReducedMotion';
 
